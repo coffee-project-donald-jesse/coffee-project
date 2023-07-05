@@ -59,7 +59,7 @@ var roastSelection = document.querySelector('#roast-selection');
 
 coffeeList.innerHTML = renderCoffees(coffees.reverse());
 
-document.addEventListener('input', updateCoffees);
+document.getElementById('roast-selection').addEventListener('input', updateCoffees);
 
 coffeeSearchInputBar.addEventListener('input', () => {
     let filteredCoffees = [];
