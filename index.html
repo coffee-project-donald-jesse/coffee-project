@@ -8,37 +8,59 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Coffee!</h1>
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <h1>Coffee!</h1>
+        </div>
+    </div>
+</div>
 
-<form>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-        <option>all</option>
-    </select>
-</form>
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <h2>Find a Coffee</h2>
+            <form>
+                <label for="roast-selection"></label>
+                <select id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                    <option>all</option>
+                </select>
+            </form>
 
+            <input class="form-control" type="search" placeholder="Search" aria-label="default input example"
+                   id="coffeeSearchInputBar">
+        </div>
+        <div class="col">
+            <h2>Add a Coffee</h2>
+            <label for="addRoast">Roast</label>
+            <br>
+            <select id="addRoast">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <br>
+            <label for="addName">Name</label>
+            <br>
+            <input class="form-control" type="search" placeholder="Type Name Here" aria-label="default input example"
+                   id="addName">
 
-<input class="form-control" type="search" placeholder="Search" aria-label="default input example"
-       id="coffeeSearchInputBar">
+            <button class="btn btn-primary" id="addCoffeeButton">Submit</button>
+        </div>
+    </div>
+</div>
 
-<h2>Add a Coffee</h2>
-<label for="addRoast">Roast</label>
-<select id="addRoast">
-    <option>light</option>
-    <option>medium</option>
-    <option>dark</option>
-</select>
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <div id="coffees"></div>
+        </div>
+    </div>
+</div>
 
-<label for="addName">Name</label>
-<input class="form-control" type="search" placeholder="Type Name Here" aria-label="default input example"
-       id="addName">
-
-<button class="btn btn-primary" id="addCoffeeButton">Submit</button>
-
-<div id="coffees"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
