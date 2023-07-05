@@ -58,20 +58,17 @@ coffeeList.innerHTML = renderCoffees(coffees.reverse());
 
 submitButton.addEventListener('click', updateCoffees);
 
-coffeeSearchInputBar.addEventListener('keyup', (e) => {
+coffeeSearchInputBar.addEventListener('input', (e) => {
     e.preventDefault();
-    if (coffeeSearchInputBar.value) {
-        let filteredCoffees = [];
-        coffees.forEach(coffee => {
-            const coffeeName = coffee.name.toLowerCase();
-            const searchValue = coffeeSearchInputBar.value.toLowerCase();
-            if (coffeeName === searchValue) {
-                filteredCoffees.push(coffee);
-            }
-        })
-        coffeeList.innerHTML = renderCoffees(filteredCoffees);
-
-    }
-})
+    let filteredCoffees = [];
+    coffees.forEach(coffee => {
+        const coffeeName = coffee.name.toLowerCase();
+        const searchValue = coffeeSearchInputBar.value.toLowerCase();
+        if (coffeeName.includes(searchValue)) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    coffeeList.innerHTML = renderCoffees(filteredCoffees);
+});
 
 
