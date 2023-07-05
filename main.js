@@ -73,4 +73,10 @@ coffeeSearchInputBar.addEventListener('input', () => {
     coffeeList.innerHTML = renderCoffees(filteredCoffees);
 });
 
-
+let addRoast = document.getElementById('addRoast').value;
+let addName = document.getElementById('addName').value;
+document.getElementById('addCoffeeButton').addEventListener('click', () => {
+    let newCoffee = {id: coffees.length+1, name:`${addName}`, roast: `${addRoast}`};
+    coffees.push(newCoffee);
+    coffeeList.innerHTML = renderCoffees (coffees);
+})
