@@ -1,9 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<div class="coffee">';
-    html += '<h1>' + coffee.name + '</h1>';
-    html += '<h2>' + coffee.roast + '</h2>';
+    let html = '<div class="row coffee">';
+    html += '<h1 class="col">' + coffee.name + '</h1>';
+    html += '<h2 class="col">' + coffee.roast + '</h2>';
     html += '</div>';
 
     return html;
