@@ -59,7 +59,7 @@ var roastSelection = document.querySelector('#roast-selection');
 
 coffeeList.innerHTML = renderCoffees(coffees.reverse());
 
-submitButton.addEventListener('click', updateCoffees);
+document.addEventListener('input', updateCoffees);
 
 coffeeSearchInputBar.addEventListener('input', () => {
     let filteredCoffees = [];
@@ -73,9 +73,9 @@ coffeeSearchInputBar.addEventListener('input', () => {
     coffeeList.innerHTML = renderCoffees(filteredCoffees);
 });
 
-let addRoast = document.getElementById('addRoast').value;
-let addName = document.getElementById('addName').value;
 document.getElementById('addCoffeeButton').addEventListener('click', () => {
+    let addRoast = document.getElementById('addRoast').value;
+    let addName = document.getElementById('addName').value;
     let newCoffee = {id: coffees.length+1, name:`${addName}`, roast: `${addRoast}`};
     coffees.push(newCoffee);
     coffeeList.innerHTML = renderCoffees (coffees);
