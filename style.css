@@ -1,9 +1,6 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+.coffeeFormLabels {
+    color: #7e3607;
 }
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.addButton {
+    background-color: #d3a572;
 }
