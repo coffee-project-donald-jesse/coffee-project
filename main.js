@@ -51,6 +51,7 @@ let coffeeList = document.getElementById('coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-coffeeList.innerHTML = renderCoffees(coffees);
+
+coffeeList.innerHTML = renderCoffees(coffees.reverse());
 
 submitButton.addEventListener('click', updateCoffees);
