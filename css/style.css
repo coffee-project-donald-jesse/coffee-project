@@ -12,7 +12,7 @@
 }
 
 .bgimg {
-    background-image: url("img/coffee-cups-bg.jpg");
+    background-image: url("../img/coffee-cups-bg.jpg");
     background-color: #ffffff;
     background-repeat: no-repeat;
     background-size: cover;
