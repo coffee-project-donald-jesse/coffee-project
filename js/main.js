@@ -1,6 +1,9 @@
 "use strict"
 
 const addCoffeeForm = document.querySelector('#add-coffee');
+let coffeeList = document.getElementById('coffees');
+let coffeeSearchInputBar = document.getElementById('coffeeSearchInputBar');
+document.getElementById('roast-selection').addEventListener('input', updateCoffees);
 
 function getImage(roastColor) {
     if (roastColor.toLowerCase() === 'light') {
@@ -65,15 +68,8 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-let coffeeList = document.getElementById('coffees');
-let coffeeSearchInputBar = document.getElementById('coffeeSearchInputBar');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-
 
 coffeeList.innerHTML = renderCoffees(coffees.reverse());
-
-document.getElementById('roast-selection').addEventListener('input', updateCoffees);
 
 coffeeSearchInputBar.addEventListener('input', () => {
     let filteredCoffees = [];
