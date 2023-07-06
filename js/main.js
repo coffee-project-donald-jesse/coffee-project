@@ -13,16 +13,13 @@ function getImage(roastColor) {
     } else {
         return '<img src="../img/medium-bean.webp" height="50px" alt="">';
     }
-
 }
-
 
 function renderCoffee(coffee) {
     let html = '<div class="row" style="font-size: xx-large; color: white">';
     html += '<p class="col">' + coffee.name + '</p>';
     html += '<p class="col">' + coffee.roast + getImage(coffee.roast) + '</p>';
     html += '</div>';
-
     return html;
 }
 
@@ -67,7 +64,6 @@ let coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
 
 coffeeList.innerHTML = renderCoffees(coffees.reverse());
 
