@@ -9,5 +9,13 @@
     background-image: url("img/coffee-beans-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Abel', sans-serif;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 40px;
 }
