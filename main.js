@@ -5,7 +5,7 @@ const addCoffeeForm = document.querySelector('#add-coffee');
 function getImage(roastColor) {
     if (roastColor.toLowerCase() === 'light') {
         return '<img src="img/light-bean.png" height="35px" alt="">';
-    } else if(roastColor.toLowerCase() === 'dark') {
+    } else if (roastColor.toLowerCase() === 'dark') {
         return '<img src="img/dark-bean.png" height="50px" alt="">';
     } else {
         return '<img src="img/medium-bean.webp" height="50px" alt="">';
@@ -96,6 +96,6 @@ document.getElementById('addCoffeeButton').addEventListener('click', () => {
 });
 
 addCoffeeForm.reset();
-addCoffeeForm.addEventListener('submit', function(e){
-   e.preventDefault();
+addCoffeeForm.addEventListener('submit', function (e) {
+    e.preventDefault();
 });
