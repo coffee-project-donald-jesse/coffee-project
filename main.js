@@ -1,5 +1,7 @@
 "use strict"
 
+const addCoffeeForm = document.querySelector('#add-coffee');
+
 function renderCoffee(coffee) {
     let html = '<div class="row" style="font-size: xx-large; color: white">';
     html += '<p class="col">' + coffee.name + '</p>';
@@ -79,4 +81,9 @@ document.getElementById('addCoffeeButton').addEventListener('click', () => {
     let newCoffee = {id: coffees.length + 1, name: `${addName}`, roast: `${addRoast}`};
     coffees.push(newCoffee);
     coffeeList.innerHTML = renderCoffees(coffees);
-})
+});
+
+addCoffeeForm.reset();
+addCoffeeForm.addEventListener('submit', function(e){
+   e.preventDefault();
+});
