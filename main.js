@@ -1,10 +1,12 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<div class="row coffee">';
-    html += '<h1 class="col">' + coffee.name + '</h1>';
-    html += '<h2 class="col">' + coffee.roast + '</h2>';
-    html += '</div>';
+    let html = '<div class="container" style="font-size: xx-large;">';
+    html += '<div class="row">'
+    html += '<p class="col">' + coffee.name + '</p>';
+    html += '</div><div class="row">'
+    html += '<p class="col">' + coffee.roast + '</p>';
+    html += '</div></div>';
 
     return html;
 }
@@ -21,11 +23,11 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = document.getElementById('roast-selection').value;
     let filteredCoffees = [];
-    if (selectedRoast === 'all') {
+    if (selectedRoast === 'All') {
         coffeeList.innerHTML = renderCoffees(coffees);
     } else {
         coffees.forEach(coffee => {
-            if (coffee.roast === selectedRoast) {
+            if (coffee.roast === selectedRoast.toLowerCase()) {
                 filteredCoffees.push(coffee);
             }
         });
@@ -76,7 +78,7 @@ coffeeSearchInputBar.addEventListener('input', () => {
 document.getElementById('addCoffeeButton').addEventListener('click', () => {
     let addRoast = document.getElementById('addRoast').value;
     let addName = document.getElementById('addName').value;
-    let newCoffee = {id: coffees.length+1, name:`${addName}`, roast: `${addRoast}`};
+    let newCoffee = {id: coffees.length + 1, name: `${addName}`, roast: `${addRoast}`};
     coffees.push(newCoffee);
-    coffeeList.innerHTML = renderCoffees (coffees);
+    coffeeList.innerHTML = renderCoffees(coffees);
 })
