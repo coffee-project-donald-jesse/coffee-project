@@ -2,10 +2,22 @@
 
 const addCoffeeForm = document.querySelector('#add-coffee');
 
+function getImage(roastColor) {
+    if (roastColor === 'light') {
+        return '<img src="img/light-bean.png" height="50px" alt="">';
+    } else if(roastColor === 'dark') {
+        return '<img src="img/dark-bean.png" height="50px" alt="">';
+    } else {
+        return '<img src="img/medium-bean.webp" height="50px" alt="">';
+    }
+
+}
+
+
 function renderCoffee(coffee) {
     let html = '<div class="row" style="font-size: xx-large; color: white">';
     html += '<p class="col">' + coffee.name + '</p>';
-    html += '<p class="col">' + coffee.roast + '</p>';
+    html += '<p class="col">' + coffee.roast + getImage(coffee.roast) + '</p>';
     html += '</div>';
 
     return html;
