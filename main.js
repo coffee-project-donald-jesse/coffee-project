@@ -1,10 +1,10 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<div class="col" style="font-size: xx-large;">';
-    html += '<p>' + coffee.name + '</p>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</div></div>';
+    let html = '<div class="row" style="font-size: xx-large;">';
+    html += '<p class="col">' + coffee.name + '</p>';
+    html += '<p class="col">' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
