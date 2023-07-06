@@ -90,7 +90,7 @@ coffeeSearchInputBar.addEventListener('input', () => {
 document.getElementById('addCoffeeButton').addEventListener('click', () => {
     let addRoast = document.getElementById('addRoast').value;
     let addName = document.getElementById('addName').value;
-    let newCoffee = {id: coffees.length + 1, name: `${addName}`, roast: `${addRoast}`};
+    let newCoffee = {id: coffees.length + 1, name: `${addName}`, roast: `${addRoast}`.toLowerCase()};
     coffees.push(newCoffee);
     coffeeList.innerHTML = renderCoffees(coffees);
 });
