@@ -1,14 +1,15 @@
 .coffeeFormLabels {
-    color: #7e3607;
+    color: #fff;
 }
 .addButton {
     background-color: #d3a572;
 }
 
 .bgimg {
-    background-image: url("img/coffee-beans-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: 150%;
+    background-image: url("img/coffee-cups-bg.jpg");
+    background-color: #ffffff;
+    background-repeat: repeat;
+    background-size: 100%;
     font-family: 'Abel', sans-serif;
     font-family: 'Anton', sans-serif;
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -18,5 +19,7 @@
 
 h2 {
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 60px;
+    font-family: Phosphate;
+    font-
 }
